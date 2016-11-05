@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 
 public class Fenetre : MonoBehaviour {
@@ -8,6 +9,7 @@ public class Fenetre : MonoBehaviour {
 	public GameObject[] tabQuestion;
 	private int currentQuestion = 0;
 	private GameObject lastQuestion = null;
+	private int cptQuestion = 0;
 
 	// Use this for initialization
 	void Start (){
@@ -46,6 +48,11 @@ public class Fenetre : MonoBehaviour {
 		if (currentQuestion >= tabQuestion.Length) {
 			currentQuestion = 0;
 			ShuffleQuestion ();
+		}
+		cptQuestion++;
+		if (cptQuestion >= 6) {
+			cptQuestion = 0;
+			SceneManager.LoadScene ("Scene1");
 		}
 	}
 }

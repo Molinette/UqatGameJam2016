@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class Question : MonoBehaviour {
 
-	private GameObject[] tabBouton = new GameObject[3];
+	private int[] tabBouton = {0,1,2};
 	public GameObject prefabBoutton; 
 	public GameObject groupButtons;
 	private Fenetre fenetre;
 	public Text textQuestionPrefab;
 	public string textQuestion;
-	public string textBonneReponse;
-	public string textMauvaiseReponse;
-	public string textMoyenneReponse;
+	public string textReponse1;
+	public string textReponse2;
+	public string textReponse3;
 
 	// Use this for initialization
 	void Start () {
@@ -21,35 +21,38 @@ public class Question : MonoBehaviour {
 		textQuestionPrefab.text = textQuestion;
 	}
 	void AfficherBoutonReponses(){
-		GameObject boutonReponse = (GameObject) GameObject.Instantiate (prefabBoutton, Vector2.zero, prefabBoutton.transform.rotation);
-		boutonReponse.transform.parent = groupButtons.transform;
-		boutonReponse.transform.localScale = new Vector3 (1, 1, 1);
-		boutonReponse.GetComponent<BoutonReponse> ().SetFenetre(fenetre);
-		boutonReponse.GetComponent<BoutonReponse> ().SetTextBoutton(textBonneReponse);
-		boutonReponse.GetComponent<BoutonReponse> ().SetReponseBoutton(1);
-		tabBouton [0] = boutonReponse;
-
-		boutonReponse = (GameObject) GameObject.Instantiate (prefabBoutton, Vector2.zero, prefabBoutton.transform.rotation);
-		boutonReponse.transform.parent = groupButtons.transform;
-		boutonReponse.transform.localScale = new Vector3 (1, 1, 1);
-		boutonReponse.GetComponent<BoutonReponse> ().SetFenetre(fenetre);
-		boutonReponse.GetComponent<BoutonReponse> ().SetTextBoutton(textMoyenneReponse);
-		boutonReponse.GetComponent<BoutonReponse> ().SetReponseBoutton(2);
-		tabBouton [1] = boutonReponse;
-
-		boutonReponse = (GameObject) GameObject.Instantiate (prefabBoutton, Vector2.zero, prefabBoutton.transform.rotation);
-		boutonReponse.transform.parent = groupButtons.transform;
-		boutonReponse.transform.localScale = new Vector3 (1, 1, 1);
-		boutonReponse.GetComponent<BoutonReponse> ().SetFenetre(fenetre);
-		boutonReponse.GetComponent<BoutonReponse> ().SetTextBoutton(textMauvaiseReponse);
-		boutonReponse.GetComponent<BoutonReponse> ().SetReponseBoutton(3);
-		tabBouton [2] = boutonReponse;
+		
+		GameObject boutonReponse;
+	
 		Shuffle ();
 
-
+		for (int i = 0; i < tabBouton.Length; i++) {
+			if (tabBouton[i] == 0) {
+				boutonReponse = (GameObject) GameObject.Instantiate (prefabBoutton, Vector2.zero, prefabBoutton.transform.rotation);
+				boutonReponse.transform.parent = groupButtons.transform;
+				boutonReponse.transform.localScale = new Vector3 (1, 1, 1);
+				boutonReponse.GetComponent<BoutonReponse> ().SetFenetre(fenetre);
+				boutonReponse.GetComponent<BoutonReponse> ().SetTextBoutton(textReponse1);
+				boutonReponse.GetComponent<BoutonReponse> ().SetReponseBoutton(1);
+			}else if( tabBouton[i] == 1){
+				boutonReponse = (GameObject) GameObject.Instantiate (prefabBoutton, Vector2.zero, prefabBoutton.transform.rotation);
+				boutonReponse.transform.parent = groupButtons.transform;
+				boutonReponse.transform.localScale = new Vector3 (1, 1, 1);
+				boutonReponse.GetComponent<BoutonReponse> ().SetFenetre(fenetre);
+				boutonReponse.GetComponent<BoutonReponse> ().SetTextBoutton(textReponse2);
+				boutonReponse.GetComponent<BoutonReponse> ().SetReponseBoutton(2);
+			}else{
+				boutonReponse = (GameObject) GameObject.Instantiate (prefabBoutton, Vector2.zero, prefabBoutton.transform.rotation);
+				boutonReponse.transform.parent = groupButtons.transform;
+				boutonReponse.transform.localScale = new Vector3 (1, 1, 1);
+				boutonReponse.GetComponent<BoutonReponse> ().SetFenetre(fenetre);
+				boutonReponse.GetComponent<BoutonReponse> ().SetTextBoutton(textReponse3);
+				boutonReponse.GetComponent<BoutonReponse> ().SetReponseBoutton(3);
+			}
+		}
 	}
 	void Shuffle(){
-		List <GameObject> listTriee = new List<GameObject>{};
+		List <int> listTriee = new List<int>{};
 
 		for (int i = 0; i < tabBouton.Length; i++) {
 			listTriee.Add (tabBouton [i]);
