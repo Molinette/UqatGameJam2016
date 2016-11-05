@@ -1,28 +1,50 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Question : MonoBehaviour {
 
-	public GameObject[] tabBouton;
+	private GameObject[] tabBouton = new GameObject[3];
+	public GameObject prefabBoutton; 
 	public GameObject groupButtons;
 	private Fenetre fenetre;
+	public Text textQuestionPrefab;
+	public string textQuestion;
+	public string textBonneReponse;
+	public string textMauvaiseReponse;
+	public string textMoyenneReponse;
 
 	// Use this for initialization
 	void Start () {
-
 		AfficherBoutonReponses ();
-
+		textQuestionPrefab.text = textQuestion;
 	}
 	void AfficherBoutonReponses(){
-		Shuffle ();
+		GameObject boutonReponse = (GameObject) GameObject.Instantiate (prefabBoutton, Vector2.zero, prefabBoutton.transform.rotation);
+		boutonReponse.transform.parent = groupButtons.transform;
+		boutonReponse.transform.localScale = new Vector3 (1, 1, 1);
+		boutonReponse.GetComponent<BoutonReponse> ().SetFenetre(fenetre);
+		boutonReponse.GetComponent<BoutonReponse> ().SetTextBoutton(textBonneReponse);
+		boutonReponse.GetComponent<BoutonReponse> ().SetReponseBoutton(1);
+		tabBouton [0] = boutonReponse;
 
-		for (int i = 0; i < tabBouton.Length; i++) {
-			GameObject boutonReponse = (GameObject) GameObject.Instantiate (tabBouton [i], Vector2.zero, tabBouton [i].transform.rotation);
-			boutonReponse.transform.parent = groupButtons.transform;
-			boutonReponse.transform.localScale = new Vector3 (1, 1, 1);
-			boutonReponse.GetComponent<BoutonReponse> ().SetFenetre(fenetre);
-		}
+		boutonReponse = (GameObject) GameObject.Instantiate (prefabBoutton, Vector2.zero, prefabBoutton.transform.rotation);
+		boutonReponse.transform.parent = groupButtons.transform;
+		boutonReponse.transform.localScale = new Vector3 (1, 1, 1);
+		boutonReponse.GetComponent<BoutonReponse> ().SetFenetre(fenetre);
+		boutonReponse.GetComponent<BoutonReponse> ().SetTextBoutton(textMoyenneReponse);
+		boutonReponse.GetComponent<BoutonReponse> ().SetReponseBoutton(2);
+		tabBouton [1] = boutonReponse;
+
+		boutonReponse = (GameObject) GameObject.Instantiate (prefabBoutton, Vector2.zero, prefabBoutton.transform.rotation);
+		boutonReponse.transform.parent = groupButtons.transform;
+		boutonReponse.transform.localScale = new Vector3 (1, 1, 1);
+		boutonReponse.GetComponent<BoutonReponse> ().SetFenetre(fenetre);
+		boutonReponse.GetComponent<BoutonReponse> ().SetTextBoutton(textMauvaiseReponse);
+		boutonReponse.GetComponent<BoutonReponse> ().SetReponseBoutton(3);
+		tabBouton [2] = boutonReponse;
+		Shuffle ();
 
 
 	}

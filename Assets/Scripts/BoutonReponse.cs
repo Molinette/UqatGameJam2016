@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BoutonReponse : MonoBehaviour {
 	
-	public float bonneReponse;
+	private int bonneReponse;
 	private TestHealthBar playerStatus;
 	private Fenetre fenetre;
+	public Text textBoutton;
 
 	// Use this for initialization
 	void Start () {
@@ -19,5 +21,13 @@ public class BoutonReponse : MonoBehaviour {
 	public void SetFenetre(Fenetre fenetre){
 		this.fenetre = fenetre;
 	}
+		
+	public void SetTextBoutton (string textBouton){
+		this.textBoutton.text = textBouton;
+	}
+	public void SetReponseBoutton (int bonneReponse){
+		this.bonneReponse = bonneReponse;
+	}
+
 		
 }

@@ -375,8 +375,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabQuestion:
   - {fileID: 1000013822335262, guid: e71ed308e7bef494d94d24df3f36d952, type: 2}
-  - {fileID: 1000010489476436, guid: 84aeb4c9f50728c4a900da7010e6c679, type: 2}
-  - {fileID: 1000012195882750, guid: b142f4390f9f3144690d5c62e617db22, type: 2}
+  - {fileID: 1000013822335262, guid: 231ffc2dde64d9940a3a824f640970b6, type: 2}
+  - {fileID: 1000013822335262, guid: 499bdde41fd299b45bcdab81493fa6c0, type: 2}
 --- !u!1 &1321673736
 GameObject:
   m_ObjectHideFlags: 0

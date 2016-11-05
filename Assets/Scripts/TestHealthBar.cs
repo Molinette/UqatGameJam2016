@@ -16,17 +16,13 @@ public class TestHealthBar : MonoBehaviour {
 	void Update () {
 		bar.transform.localScale = new Vector2 (bar.transform.localScale.x, currentMotivation / maxMotivation);
 	}
-	public void AjouterMotivation(float motivation){
+	public void AjouterMotivation(int motivation){
 		if (motivation == 1) {
 			currentMotivation = currentMotivation + 10;
 			if (currentMotivation >= 100) {
 				currentMotivation = 100;
 			}
 		} else if (motivation == 2) {
-			currentMotivation = currentMotivation + 5;
-			if (currentMotivation >= 100) {
-				currentMotivation = 100;
-			}
 		} else {
 			currentMotivation = currentMotivation - 10;
 			if (currentMotivation <= 0) {
