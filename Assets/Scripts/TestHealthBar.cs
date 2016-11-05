@@ -3,17 +3,35 @@ using System.Collections;
 
 public class TestHealthBar : MonoBehaviour {
 
-	private float maxDertermination;
-	public float currentVie = 20f;
+	private float maxMotivation;
+	public float currentMotivation;
 	public GameObject bar;  
 
 	// Use this for initialization
 	void Start () {
-		maxDertermination = 100f;
+		maxMotivation = 100f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		bar.transform.localScale = new Vector2 (bar.transform.localScale.x, currentVie / maxDertermination);
+		bar.transform.localScale = new Vector2 (bar.transform.localScale.x, currentMotivation / maxMotivation);
+	}
+	public void AjouterMotivation(float motivation){
+		if (motivation == 1) {
+			currentMotivation = currentMotivation + 10;
+			if (currentMotivation >= 100) {
+				currentMotivation = 100;
+			}
+		} else if (motivation == 2) {
+			currentMotivation = currentMotivation + 5;
+			if (currentMotivation >= 100) {
+				currentMotivation = 100;
+			}
+		} else {
+			currentMotivation = currentMotivation - 10;
+			if (currentMotivation <= 0) {
+				currentMotivation = 0;
+			}
+		}
 	}
 }
