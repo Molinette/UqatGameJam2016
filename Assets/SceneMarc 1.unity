@@ -1341,23 +1341,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &741672003 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012213495834, guid: 37df23a655f37994585a6def1b93e023,
-    type: 2}
-  m_PrefabInternal: {fileID: 787853923}
---- !u!114 &741672005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 741672003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f2353ef36ab07b4ebb03f68e520f71a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bar: {fileID: 903354281}
 --- !u!1001 &787853923
 Prefab:
   m_ObjectHideFlags: 0
@@ -1397,19 +1380,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012020905258, guid: 37df23a655f37994585a6def1b93e023,
+    - target: {fileID: 114000011407769382, guid: 37df23a655f37994585a6def1b93e023,
         type: 2}
-      propertyPath: jumpingSpeed
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000010283071910, guid: 37df23a655f37994585a6def1b93e023,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 61000011966196224, guid: 37df23a655f37994585a6def1b93e023, type: 2}
-    - {fileID: 212000010283071910, guid: 37df23a655f37994585a6def1b93e023, type: 2}
+      propertyPath: bar
+      value: 
+      objectReference: {fileID: 903354281}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37df23a655f37994585a6def1b93e023, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &810329388 stripped

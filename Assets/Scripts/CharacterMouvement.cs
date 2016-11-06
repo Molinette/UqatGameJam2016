@@ -63,6 +63,12 @@ public class CharacterMouvement : MonoBehaviour {
 			princess.transform.position = princessPos.position;
 			princess.GetComponent<Princess> ().SetPrincessCarried ();
 		}
+		if(other.gameObject.CompareTag("Respawn")){
+			if (princess != null) {
+				princess.GetComponent<Princess> ().Respawn ();
+				princess = null;
+			}
+		}
 
 	}
 

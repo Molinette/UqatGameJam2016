@@ -7,7 +7,11 @@ public class PlayerStatus : MonoBehaviour {
 
 	private int maxMotivation;
 	private int currentMotivation;
-	public GameObject bar;  
+	public GameObject bar; 
+	public Text chronoText;
+	public float maxWorkTime;
+	public Transform respawn;
+	private float timeLeft;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +22,7 @@ public class PlayerStatus : MonoBehaviour {
 		} else {
 			PlayerPrefs.SetInt ("Motivation", currentMotivation);
 		}
+		timeLeft = maxWorkTime;
 	}
 
 	// Update is called once per frame
@@ -27,18 +32,26 @@ public class PlayerStatus : MonoBehaviour {
 			currentMotivation = PlayerPrefs.GetInt ("Motivation");
 		}
 		bar.transform.localScale = new Vector2 (bar.transform.localScale.x, (float) currentMotivation / (float) maxMotivation);
+		timeLeft -= Time.deltaTime;
+		timeLeft = Mathf.Max(timeLeft,0);
+		chronoText.text = (int)timeLeft + "s";
+		if (timeLeft <= 0) {
+			SceneManager.LoadScene ("QuestionScene");
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.CompareTag("Respawn")){
-			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+			/*SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 			Time.timeScale = 1;
 			currentMotivation = currentMotivation - 20;
 			if (currentMotivation <= 0) {
 				currentMotivation = 0;
 				GameOver ();
 			}
-			SaveMotivation ();
+			SaveMotivation ();*/
+			currentMotivation = currentMotivation - 20;
+			transform.position = new Vector2 (respawn.transform.position.x, respawn.transform.position.y);
 		}
 	}
 	public void AjouterMotivation(int motivation){

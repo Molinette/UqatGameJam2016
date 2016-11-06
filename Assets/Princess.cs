@@ -5,15 +5,24 @@ public class Princess : MonoBehaviour {
 	public Animator anim;
 	private Rigidbody2D rb;
 	public GameObject challenge;
+	private Vector3 startPosition;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
+		if (transform.position.x > 27) {
+			startPosition = transform.position - new Vector3 (36, 0, 0);
+		} else {
+			startPosition = transform.position - new Vector3 (18, 0, 0);
+		}
+		print (startPosition);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetKeyDown (KeyCode.R)) {
+			Respawn ();
+		}
 	}
 
 	public void SetPrincessCrying(){
@@ -38,5 +47,11 @@ public class Princess : MonoBehaviour {
 			rb.velocity = Vector2.zero;
 			transform.position = new Vector2 (other.transform.position.x, transform.position.y);
 		}
+	}
+
+	public void Respawn(){
+		transform.parent = null;
+		transform.position = startPosition;
+		SetPrincessCrying ();
 	}
 }
