@@ -78,7 +78,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
 --- !u!114 &114000012867059588
@@ -128,11 +128,16 @@ MonoBehaviour:
   prefabBoutton: {fileID: 1000014230569300, guid: d5d8bb378aefef643a8717e0d2cd64d3,
     type: 2}
   groupButtons: {fileID: 1000012792630150}
+  nextButton: {fileID: 1000011480445638, guid: d9565635f041b1a4497dde93d18db82f, type: 2}
   textQuestionPrefab: {fileID: 114000012867059588}
   textQuestion: The toilet seat was left up this morning!
   textReponse1: '...'
   textReponse2: I thought it was right bottom.
   textReponse3: I'm so sorry.
+  textReplique1: Ugh... Just don't do it next time.
+  textReplique2: Wow, hahaha! You're so funny dear, how long did it take you to come
+    up with that one?
+  textReplique3: No, you're not, if you were actually sorry, you would remember to
 --- !u!222 &222000010292557978
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -161,7 +166,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.00000047683716}
-  m_SizeDelta: {x: 180, y: 100}
+  m_SizeDelta: {x: 600, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000010894596268
 RectTransform:
