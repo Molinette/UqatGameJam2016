@@ -41,6 +41,7 @@ public class Princess : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D other){
 		if(other.CompareTag("RescueZone")){
+			transform.parent.gameObject.GetComponent<PlayerStatus> ().AjouterPrincess ();
 			SetPrincessRescued();
 			transform.parent = challenge.transform;
 			rb.isKinematic = false;

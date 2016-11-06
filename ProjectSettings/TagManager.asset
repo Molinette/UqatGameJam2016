@@ -9,6 +9,7 @@ TagManager:
   - Character
   - Princess
   - RescueZone
+  - ProjDest
   layers:
   - Default
   - TransparentFX

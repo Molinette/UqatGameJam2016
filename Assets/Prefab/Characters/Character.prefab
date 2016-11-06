@@ -441,6 +441,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 0}
+  chronoText: {fileID: 0}
+  princessText: {fileID: 0}
+  maxWorkTime: 0
+  respawn: {fileID: 0}
 --- !u!114 &114000012020905258
 MonoBehaviour:
   m_ObjectHideFlags: 1
