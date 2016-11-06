@@ -96,6 +96,6 @@ public class PlayerStatus : MonoBehaviour {
 	}
 
 	public void GameOver(){
-		print ("Game Over");
+		SceneManager.LoadScene ("GameOver");
 	}
 }
