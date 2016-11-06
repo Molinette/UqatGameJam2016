@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scene/SceneMarc 1.unity
+  - enabled: 1
     path: Assets/Scene/Barre de vie.unity
   - enabled: 1
     path: Assets/Scene/Scene1.unity
   - enabled: 1
     path: Assets/Scene/SceneTest.unity
-  - enabled: 1
-    path: Assets/Scene/SceneMarc 1.unity
   - enabled: 1
     path: Assets/Scene/QuestionScene.unity
