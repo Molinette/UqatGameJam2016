@@ -45,14 +45,10 @@ public class Fenetre : MonoBehaviour {
 		lastQuestion.transform.localPosition = Vector3.zero;
 		lastQuestion.GetComponent<Question> ().SetFenetre (this);
 		currentQuestion++;
-		if (currentQuestion >= tabQuestion.Length) {
+		if (currentQuestion == 6) {
 			currentQuestion = 0;
 			ShuffleQuestion ();
-		}
-		cptQuestion++;
-		if (cptQuestion >= 6) {
-			cptQuestion = 0;
-			SceneManager.LoadScene ("SceneTest");
+			SceneManager.LoadScene ("SceneMarc 1");
 		}
 	}
 }

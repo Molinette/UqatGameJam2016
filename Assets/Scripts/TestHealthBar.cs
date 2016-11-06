@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TestHealthBar : MonoBehaviour {
 
@@ -26,6 +27,12 @@ public class TestHealthBar : MonoBehaviour {
 			currentMotivation = PlayerPrefs.GetInt ("Motivation");
 		}
 		bar.transform.localScale = new Vector2 (bar.transform.localScale.x, (float) currentMotivation / (float) maxMotivation);
+	}
+
+	void OnTriggerEnter2D(Collider2D other){
+		if(other.gameObject.CompareTag("Respawn")){
+			Debug.Log ("lol");
+		}
 	}
 	public void AjouterMotivation(int motivation){
 		if (motivation == 1) {
