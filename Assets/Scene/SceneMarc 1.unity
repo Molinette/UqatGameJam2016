@@ -766,6 +766,12 @@ MonoBehaviour:
   - {fileID: 1000010792701130, guid: 749ed38af7d589a4b98d99c48674b353, type: 2}
   - {fileID: 1000013446105542, guid: 37022cfc80a4ae64bb6955cd2d0af04d, type: 2}
   - {fileID: 1000012427243532, guid: 1e0720b41cc713f4d9e5ecb4f2f6a317, type: 2}
+  - {fileID: 1000012515188700, guid: 8687738e9e07ccd4d8c5a369e24ed191, type: 2}
+  - {fileID: 1000013622372404, guid: a4f41ef626aad3543afd4ee31e9e1771, type: 2}
+  - {fileID: 1000012313843928, guid: 032b5c9912060f24b88ee4a075ce0da5, type: 2}
+  - {fileID: 1000013916038628, guid: 9d990f99d8e40954d84f648602b4c3cc, type: 2}
+  - {fileID: 1000013916038628, guid: 2c0bea977a130d14bbcde435c2ff7d52, type: 2}
+  - {fileID: 1000013916038628, guid: 4b196b36d3ff6144c9086241a90ffcc7, type: 2}
 --- !u!222 &248710080
 CanvasRenderer:
   m_ObjectHideFlags: 0
