@@ -6,6 +6,7 @@ public class NextZone : MonoBehaviour {
 	public GameObject wall;
 	private GameObject stage;
 	private bool activated = false;
+	public int challengeType = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,11 @@ public class NextZone : MonoBehaviour {
 			activated = true;
 			trigger.SetActive (false);
 			wall.SetActive(true);
+			if (challengeType == 0) {
+				GameObject.FindGameObjectWithTag ("Stage").GetComponent<Stage> ().createQuest();
+			} else {
+				GameObject.FindGameObjectWithTag ("Stage").GetComponent<Stage> ().createChallenge();
+			}
 		}
 	}
 }

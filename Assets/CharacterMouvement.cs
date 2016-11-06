@@ -28,11 +28,11 @@ public class CharacterMouvement : MonoBehaviour {
 			float horizontalInput = Input.GetAxis ("Horizontal");
 			if (horizontalInput > 0) {
 				transform.localScale = new Vector2 (1, transform.localScale.y);
-				if(isGrounded)
+				//if(isGrounded)
 				anim.SetBool ("isWalking", true);
 			} else if (horizontalInput < 0) {
 				transform.localScale = new Vector2 (-1, transform.localScale.y);
-				if(isGrounded)
+				//if(isGrounded)
 				anim.SetBool ("isWalking", true);
 			} else {
 				anim.SetBool ("isWalking", false);
@@ -41,7 +41,7 @@ public class CharacterMouvement : MonoBehaviour {
 			if (isGrounded && Input.GetButtonDown ("Jump")) {
 				rb.velocity = new Vector2 (rb.velocity.x, jumpingSpeed);
 				isGrounded = false;
-				anim.SetBool ("isWalking", false);
+				//anim.SetBool ("isWalking", false);
 			} 
 		} else {
 			rb.MovePosition( Vector2.MoveTowards (transform.position, nextPos.transform.position, walkingSpeed*Time.deltaTime));

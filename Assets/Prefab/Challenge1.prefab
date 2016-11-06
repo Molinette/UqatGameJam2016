@@ -275,7 +275,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010635307802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.51, y: -2.5187507, z: 2.11}
+  m_LocalPosition: {x: 9.498, y: -2.5187507, z: 2.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -626,6 +626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger: {fileID: 1000011027325494}
   wall: {fileID: 1000011584371866}
+  challengeType: 1
 --- !u!114 &114000013640873930
 MonoBehaviour:
   m_ObjectHideFlags: 1
