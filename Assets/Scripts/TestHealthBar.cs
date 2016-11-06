@@ -1,20 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class TestHealthBar : MonoBehaviour {
 
-	private float maxMotivation;
-	public float currentMotivation;
+	private int maxMotivation;
+	private int currentMotivation;
 	public GameObject bar;  
 
 	// Use this for initialization
 	void Start () {
-		maxMotivation = 100f;
+		
+		maxMotivation = 100;
+		if (PlayerPrefs.HasKey ("Motivation")) {
+			currentMotivation = PlayerPrefs.GetInt ("Motivation", currentMotivation);
+		} else {
+			PlayerPrefs.SetInt ("Motivation", currentMotivation);
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		bar.transform.localScale = new Vector2 (bar.transform.localScale.x, currentMotivation / maxMotivation);
+		if (Input.GetKeyDown (KeyCode.R)) {
+			PlayerPrefs.SetInt ("Motivation", 100);
+			currentMotivation = PlayerPrefs.GetInt ("Motivation");
+		}
+		bar.transform.localScale = new Vector2 (bar.transform.localScale.x, (float) currentMotivation / (float) maxMotivation);
 	}
 	public void AjouterMotivation(int motivation){
 		if (motivation == 1) {
@@ -22,12 +33,24 @@ public class TestHealthBar : MonoBehaviour {
 			if (currentMotivation >= 100) {
 				currentMotivation = 100;
 			}
+			//SaveMotivation ();
 		} else if (motivation == 2) {
 		} else {
 			currentMotivation = currentMotivation - 10;
 			if (currentMotivation <= 0) {
 				currentMotivation = 0;
+				//GameOver ();
 			}
+
 		}
+		//SaveMotivation ();
 	}
+
+	public void SaveMotivation(){
+		PlayerPrefs.SetInt ("Motivation", currentMotivation);
+	}
+	/*
+	public void GameOver(){
+		
+	}*/
 }

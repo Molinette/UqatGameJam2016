@@ -52,7 +52,7 @@ public class Fenetre : MonoBehaviour {
 		cptQuestion++;
 		if (cptQuestion >= 6) {
 			cptQuestion = 0;
-			SceneManager.LoadScene ("Scene1");
+			SceneManager.LoadScene ("SceneTest");
 		}
 	}
 }

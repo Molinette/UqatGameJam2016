@@ -9,51 +9,35 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000012337530034}
+  m_RootGameObject: {fileID: 1000010792701130}
   m_IsPrefabParent: 1
---- !u!1 &1000012337530034
+--- !u!1 &1000010792701130
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 224: {fileID: 224000011233095764}
-  - 222: {fileID: 222000010292557978}
-  - 114: {fileID: 114000013958808118}
+  - 224: {fileID: 224000013073033914}
+  - 222: {fileID: 222000012159201550}
+  - 114: {fileID: 114000013791696856}
   m_Layer: 0
-  m_Name: Question4
+  m_Name: Question6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000012792630150
+--- !u!1 &1000011092319172
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 224: {fileID: 224000010679962704}
-  - 114: {fileID: 114000010450668580}
-  m_Layer: 0
-  m_Name: Group Boutons
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1000014007750670
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 224000010894596268}
-  - 222: {fileID: 222000011778591658}
-  - 114: {fileID: 114000012867059588}
+  - 224: {fileID: 224000013211080014}
+  - 222: {fileID: 222000014007689630}
+  - 114: {fileID: 114000011322584402}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -61,12 +45,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114000010450668580
+--- !u!1 &1000013609927440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 224000012321739558}
+  - 114: {fileID: 114000010810667410}
+  m_Layer: 0
+  m_Name: Group Boutons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &114000010810667410
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012792630150}
+  m_GameObject: {fileID: 1000013609927440}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1297475563, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
@@ -81,12 +81,12 @@ MonoBehaviour:
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
---- !u!114 &114000012867059588
+--- !u!114 &114000011322584402
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014007750670}
+  m_GameObject: {fileID: 1000011092319172}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
@@ -114,12 +114,12 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: T'etais ou?!?!?!
---- !u!114 &114000013958808118
+--- !u!114 &114000013791696856
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012337530034}
+  m_GameObject: {fileID: 1000010792701130}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a131375e2d5685499e9fcbfc1c5d1bc, type: 3}
@@ -127,73 +127,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabBoutton: {fileID: 1000014230569300, guid: d5d8bb378aefef643a8717e0d2cd64d3,
     type: 2}
-  groupButtons: {fileID: 1000012792630150}
-  textQuestionPrefab: {fileID: 114000012867059588}
-  textQuestion: The toilet seat was left up this morning!
-  textReponse1: '...'
-  textReponse2: I thought it was right bottom.
-  textReponse3: I'm so sorry.
---- !u!222 &222000010292557978
+  groupButtons: {fileID: 1000013609927440}
+  textQuestionPrefab: {fileID: 114000011322584402}
+  textQuestion: Did you get the groceries like I asked you?
+  textReponse1: Have you heard of fasting?
+  textReponse2: '...I already ate them all.'
+  textReponse3: They were stolen.
+--- !u!222 &222000012159201550
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012337530034}
---- !u!222 &222000011778591658
+  m_GameObject: {fileID: 1000010792701130}
+--- !u!222 &222000014007689630
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014007750670}
---- !u!224 &224000010679962704
+  m_GameObject: {fileID: 1000011092319172}
+--- !u!224 &224000012321739558
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012792630150}
+  m_GameObject: {fileID: 1000013609927440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 224000011233095764}
+  m_Father: {fileID: 224000013073033914}
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.00000047683716}
   m_SizeDelta: {x: 180, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224000010894596268
+--- !u!224 &224000013073033914
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014007750670}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 224000011233095764}
-  m_RootOrder: 1
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 197.16, y: 48.899994}
-  m_Pivot: {x: 0.5, y: 1}
---- !u!224 &224000011233095764
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012337530034}
+  m_GameObject: {fileID: 1000010792701130}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 224000010679962704}
-  - {fileID: 224000010894596268}
+  - {fileID: 224000012321739558}
+  - {fileID: 224000013211080014}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
@@ -201,3 +183,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -2, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224000013211080014
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011092319172}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 224000013073033914}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 197.16, y: 48.899994}
+  m_Pivot: {x: 0.5, y: 1}
