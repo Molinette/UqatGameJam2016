@@ -14,6 +14,7 @@ public class PlayerStatus : MonoBehaviour {
 	public Transform respawn;
 	private float timeLeft;
 	private int nbPrincess;
+	public GameObject dropTheCape;
 
 	// Use this for initialization
 	void Start () {
@@ -44,8 +45,9 @@ public class PlayerStatus : MonoBehaviour {
 		timeLeft = Mathf.Max(timeLeft,0);
 		chronoText.text = (int)timeLeft + "s";
 		princessText.text = nbPrincess + "";
-		if (timeLeft <= 0) {
-			SceneManager.LoadScene ("QuestionScene");
+		if (timeLeft <= 0 && GetComponent<CharacterMouvement>().GetIsGrounded()) {
+			GameObject.Instantiate (dropTheCape, transform.position, dropTheCape.transform.rotation);
+			Destroy (gameObject);
 		}
 	}
 

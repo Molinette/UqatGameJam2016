@@ -31,7 +31,7 @@ public class TestHealthBar : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.CompareTag("Respawn")){
-			Debug.Log ("lol");
+			
 		}
 	}
 	public void AjouterMotivation(int motivation){
@@ -40,24 +40,23 @@ public class TestHealthBar : MonoBehaviour {
 			if (currentMotivation >= 100) {
 				currentMotivation = 100;
 			}
-			//SaveMotivation ();
+			SaveMotivation ();
 		} else if (motivation == 2) {
 		} else {
 			currentMotivation = currentMotivation - 10;
 			if (currentMotivation <= 0) {
 				currentMotivation = 0;
-				//GameOver ();
+				GameOver ();
 			}
-
 		}
-		//SaveMotivation ();
+		SaveMotivation ();
 	}
 
 	public void SaveMotivation(){
 		PlayerPrefs.SetInt ("Motivation", currentMotivation);
 	}
-	/*
+
 	public void GameOver(){
-		
-	}*/
+		SceneManager.LoadScene ("GameOver");
+	}
 }

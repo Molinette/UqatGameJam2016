@@ -50,7 +50,7 @@ public class Fenetre : MonoBehaviour {
 		if (currentQuestion == 6) {
 			currentQuestion = 0;
 			ShuffleQuestion ();
-			SceneManager.LoadScene ("SceneMarc 2");
+			SceneManager.LoadScene ("GamePlayPrinc");
 		}
 	}
 	public void ChangeExpression(int humeur){

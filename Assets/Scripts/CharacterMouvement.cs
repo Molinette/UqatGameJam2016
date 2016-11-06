@@ -74,6 +74,10 @@ public class CharacterMouvement : MonoBehaviour {
 
 	}
 
+	public bool GetIsGrounded(){
+		return isGrounded;
+	}
+
 	public void StopMovingToNext(){
 		movingToNextPos = false;
 	}
