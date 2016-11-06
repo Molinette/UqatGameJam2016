@@ -1073,6 +1073,52 @@ BoxCollider2D:
   m_Offset: {x: -0.5, y: -0.5}
   serializedVersion: 2
   m_Size: {x: 6, y: 2}
+--- !u!1001 &466083073
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1319733824}
+    m_Modifications:
+    - target: {fileID: 4000012358749604, guid: c8e7eb6e6d6295544a6295a83d79432c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 36.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012358749604, guid: c8e7eb6e6d6295544a6295a83d79432c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012358749604, guid: c8e7eb6e6d6295544a6295a83d79432c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012358749604, guid: c8e7eb6e6d6295544a6295a83d79432c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012358749604, guid: c8e7eb6e6d6295544a6295a83d79432c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012358749604, guid: c8e7eb6e6d6295544a6295a83d79432c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012358749604, guid: c8e7eb6e6d6295544a6295a83d79432c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012358749604, guid: c8e7eb6e6d6295544a6295a83d79432c, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013893352372, guid: c8e7eb6e6d6295544a6295a83d79432c, type: 2}
+      propertyPath: m_Name
+      value: Wait1 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c8e7eb6e6d6295544a6295a83d79432c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &527173344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,7 +1471,7 @@ Prefab:
     - target: {fileID: 114000012020905258, guid: 37df23a655f37994585a6def1b93e023,
         type: 2}
       propertyPath: jumpingSpeed
-      value: 20
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37df23a655f37994585a6def1b93e023, type: 2}
@@ -2042,6 +2088,7 @@ Transform:
   - {fileID: 810329388}
   - {fileID: 107931057}
   - {fileID: 1611798632}
+  - {fileID: 2006752055}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!114 &1319733825
@@ -2777,6 +2824,11 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!4 &2006752055 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000012358749604, guid: c8e7eb6e6d6295544a6295a83d79432c,
+    type: 2}
+  m_PrefabInternal: {fileID: 466083073}
 --- !u!1 &2123831352
 GameObject:
   m_ObjectHideFlags: 0
