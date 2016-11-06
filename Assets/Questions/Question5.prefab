@@ -108,12 +108,17 @@ MonoBehaviour:
   prefabBoutton: {fileID: 1000014230569300, guid: d5d8bb378aefef643a8717e0d2cd64d3,
     type: 2}
   groupButtons: {fileID: 1000013045178000}
+  nextButton: {fileID: 1000011480445638, guid: d9565635f041b1a4497dde93d18db82f, type: 2}
   textQuestionPrefab: {fileID: 114000011631532414}
   textQuestion: You smell of perfume, explain yourself immediately.
   textReponse1: You don't like my new perfume?
   textReponse2: I was at the potion shop. They were promoting a new promoting a new
     perfume, I can get it for you if you want.
   textReponse3: I think you're imagining things.
+  textReplique1: Oh... it's not that I don't like it... it's just that this is perfume
+    for women, but I'm all about equal opportunity.
+  textReplique2: No thanks, I don't like cheep perfume.
+  textReplique3: I think you can get out!
 --- !u!114 &114000013866186756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,7 +136,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
 --- !u!222 &222000013439296516
@@ -182,7 +187,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.00000047683716}
-  m_SizeDelta: {x: 180, y: 100}
+  m_SizeDelta: {x: 600, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000013432055674
 RectTransform:

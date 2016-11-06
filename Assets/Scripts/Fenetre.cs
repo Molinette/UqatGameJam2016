@@ -10,11 +10,13 @@ public class Fenetre : MonoBehaviour {
 	private int currentQuestion = 0;
 	private GameObject lastQuestion = null;
 	private int cptQuestion = 0;
+	public Animator wife;
 
 	// Use this for initialization
 	void Start (){
 		ShuffleQuestion ();
 		NextQuestion ();
+		wife.SetBool ("isNeutral", true);
 	}
 	
 	// Update is called once per frame
@@ -49,6 +51,18 @@ public class Fenetre : MonoBehaviour {
 			currentQuestion = 0;
 			ShuffleQuestion ();
 			SceneManager.LoadScene ("SceneMarc 1");
+		}
+	}
+	public void ChangeExpression(int humeur){
+		if (humeur == 1) {
+			wife.SetBool ("isNeutral", false);
+			wife.SetFloat ("angryOrHappy", 0.0f);
+
+		} else if (humeur == 2) {
+			wife.SetBool ("isNeutral", true);
+		}else{
+			wife.SetBool ("isNeutral", false);
+			wife.SetFloat ("angryOrHappy", 1.0f);
 		}
 	}
 }

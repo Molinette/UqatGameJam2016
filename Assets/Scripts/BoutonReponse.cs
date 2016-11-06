@@ -7,6 +7,7 @@ public class BoutonReponse : MonoBehaviour {
 	private int bonneReponse;
 	private TestHealthBar playerStatus;
 	private Fenetre fenetre;
+	private Question question;
 	public Text textBoutton;
 
 	// Use this for initialization
@@ -16,10 +17,15 @@ public class BoutonReponse : MonoBehaviour {
 	}
 	public void buttonAction(){
 		playerStatus.AjouterMotivation (bonneReponse);
-		fenetre.NextQuestion ();
+		fenetre.ChangeExpression (bonneReponse);
+		question.ShowResponse(bonneReponse);
 	}
+
 	public void SetFenetre(Fenetre fenetre){
 		this.fenetre = fenetre;
+	}
+	public void SetQuestion(Question question){
+		this.question = question;
 	}
 		
 	public void SetTextBoutton (string textBouton){

@@ -78,7 +78,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
 --- !u!114 &114000012624301066
@@ -95,12 +95,17 @@ MonoBehaviour:
   prefabBoutton: {fileID: 1000014230569300, guid: d5d8bb378aefef643a8717e0d2cd64d3,
     type: 2}
   groupButtons: {fileID: 1000010450391884}
+  nextButton: {fileID: 1000011480445638, guid: d9565635f041b1a4497dde93d18db82f, type: 2}
   textQuestionPrefab: {fileID: 114000012841806150}
   textQuestion: If you had to choose between only being with me or your best friend,
     who would you choose?
   textReponse1: I have to go with the best friend.
   textReponse2: I choose you.
   textReponse3: I can have both.
+  textReplique1: It's a good thing I am your best friend.
+  textReplique2: You need to be more faithful to your best friend, but you did choose
+    me, so I guess I forgive you.
+  textReplique3: What a cop-out answer. How about you grow a backbone.
 --- !u!114 &114000012841806150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,7 +187,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.00000047683716}
-  m_SizeDelta: {x: 180, y: 100}
+  m_SizeDelta: {x: 600, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000013015591766
 RectTransform:

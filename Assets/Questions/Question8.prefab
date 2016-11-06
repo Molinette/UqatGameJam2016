@@ -111,7 +111,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
 --- !u!114 &114000013410226842
@@ -128,11 +128,19 @@ MonoBehaviour:
   prefabBoutton: {fileID: 1000014230569300, guid: d5d8bb378aefef643a8717e0d2cd64d3,
     type: 2}
   groupButtons: {fileID: 1000011984631628}
+  nextButton: {fileID: 1000011480445638, guid: d9565635f041b1a4497dde93d18db82f, type: 2}
   textQuestionPrefab: {fileID: 114000010777055688}
   textQuestion: When are you going to get a real job?
   textReponse1: But this is my dream job.
   textReponse2: I just need a bit more time.
   textReponse3: I have a part time job as a hero.
+  textReplique1: Arguing at this point is won't change anything, there is nothing
+    I could say at this point that could persuade you.
+  textReplique2: Sigh... I know the economy has not been good in recent years, so
+    I understand. But I am starting to run out of patience.
+  textReplique3: No one even pays you, you have no inventory. I'm the one who pays
+    for everything, 'Hero' is not a real job. I went to lawschool and became a lawyer.
+    What did you do?
 --- !u!222 &222000012119133298
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -161,7 +169,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.00000047683716}
-  m_SizeDelta: {x: 180, y: 100}
+  m_SizeDelta: {x: 600, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000010632333342
 RectTransform:
