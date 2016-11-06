@@ -58,10 +58,12 @@ public class CharacterMouvement : MonoBehaviour {
 			rb.velocity = Vector2.zero;
 		}
 		if (other.CompareTag ("Princess") && princess == null) {
-			princess = other.gameObject;
-			princess.transform.parent = transform;
-			princess.transform.position = princessPos.position;
-			princess.GetComponent<Princess> ().SetPrincessCarried ();
+				princess = other.gameObject;
+			if (princess.GetComponent<Princess> ().GetIsRescued () == false) {
+				princess.transform.parent = transform;
+				princess.transform.position = princessPos.position;
+				princess.GetComponent<Princess> ().SetPrincessCarried ();
+			}
 		}
 		if(other.gameObject.CompareTag("Respawn")){
 			if (princess != null) {

@@ -6,6 +6,7 @@ public class Princess : MonoBehaviour {
 	private Rigidbody2D rb;
 	public GameObject challenge;
 	private Vector3 startPosition;
+	private bool isRescued = false;
 
 	// Use this for initialization
 	void Start () {
@@ -47,12 +48,19 @@ public class Princess : MonoBehaviour {
 			rb.isKinematic = false;
 			rb.velocity = Vector2.zero;
 			transform.position = new Vector2 (other.transform.position.x, transform.position.y);
+			isRescued = true;
 		}
 	}
 
 	public void Respawn(){
-		transform.parent = null;
-		transform.position = startPosition;
-		SetPrincessCrying ();
+		if (isRescued == false) {
+			transform.parent = null;
+			transform.position = startPosition;
+			SetPrincessCrying ();
+		}
+	}
+
+	public bool GetIsRescued(){
+		return isRescued;
 	}
 }

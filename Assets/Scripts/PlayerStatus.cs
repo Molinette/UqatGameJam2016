@@ -56,9 +56,8 @@ public class PlayerStatus : MonoBehaviour {
 			currentMotivation = currentMotivation - 20;
 			if (currentMotivation <= 0) {
 				currentMotivation = 0;
-				//GameOver ();
+				GameOver ();
 			}
-			currentMotivation = currentMotivation - 20;
 			SaveMotivation ();
 			transform.position = new Vector2 (respawn.transform.position.x, respawn.transform.position.y);
 			GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
@@ -83,6 +82,11 @@ public class PlayerStatus : MonoBehaviour {
 	}
 
 	public void AjouterPrincess(){
+		currentMotivation = currentMotivation + 10;
+		if (currentMotivation >= 100) {
+			currentMotivation = 100;
+		}
+		SaveMotivation ();
 		nbPrincess++;
 		PlayerPrefs.SetInt ("Princess", nbPrincess);
 	}

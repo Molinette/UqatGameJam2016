@@ -69,7 +69,7 @@ GameObject:
   - 4: {fileID: 4000011846212712}
   - 50: {fileID: 50000012955904994}
   - 114: {fileID: 114000012020905258}
-  - 114: {fileID: 114000011407769382}
+  - 114: {fileID: 114000013187404724}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -192,7 +192,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012394921232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.508, z: 0}
+  m_LocalPosition: {x: -0.091, y: -0.508, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -218,8 +218,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012030453850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.489, z: 0}
+  m_LocalScale: {x: 1.25, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011846212712}
@@ -305,7 +305,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013966647588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -355,7 +355,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
 --- !u!58 &58000013003374414
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -397,7 +397,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5}
+  m_Size: {x: 0.4, y: 1.5}
 --- !u!61 &61000013637048548
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -429,22 +429,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000011407769382
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012213495834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f2353ef36ab07b4ebb03f68e520f71a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bar: {fileID: 0}
-  chronoText: {fileID: 0}
-  princessText: {fileID: 0}
-  maxWorkTime: 0
-  respawn: {fileID: 0}
 --- !u!114 &114000012020905258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -464,6 +448,22 @@ MonoBehaviour:
     m_Bits: 256
   princessPos: {fileID: 4000012497531760}
   anim: {fileID: 95000012682331898}
+--- !u!114 &114000013187404724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012213495834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2353ef36ab07b4ebb03f68e520f71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 0}
+  chronoText: {fileID: 0}
+  princessText: {fileID: 0}
+  maxWorkTime: 20
+  respawn: {fileID: 0}
 --- !u!212 &212000012320596176
 SpriteRenderer:
   m_ObjectHideFlags: 1
